@@ -1,172 +1,321 @@
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-}
-/* Header Styles */
-header{
-    min-height: 200px;
-    margin:auto;
-    background-color:rgb(250, 111, 28);
+    font-family: 'Roboto', sans-serif;
 }
 
-footer{
-    background-color: rgb(39, 38, 44);
+:root {
+    --orange: #fa6f1c;
+    --light-orange:rgba(250, 111, 28, 0.2)
 
 }
 
-body {
-    background-color: rgba(255, 255, 255, 0.205);
-}
-
-.header-title{
-    padding: 20px;
-    margin: auto;
-    align-items: center;
-}
-
-.header-title h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 64px;
-    color:#fff;
-
-}
-.container{
+.container {
     padding: 50px;
     margin-bottom: 10px;
 }
 
-.container-footer {
+
+/* Background Color */
+.lightorange{
+    background-color: var(--light-orange);
+}
+
+/* Logo */
+
+.logo{
+    width: 300px;
+    height: 100px;
+    background-color: var(--orange);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* Menu Bar */
+
+.menubar {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menubar-logo {
+    float: left;
+    padding: 10px 10px 10px 0px;
+    flex-grow: 4;
+
+}
+
+
+.menu-donate {
+    flex-grow: 1;
+}
+
+
+.nav-links {
     padding: 50px;
-    margin-bottom: 0px;
+    flex-grow: 2;
 }
 
-.footer-logo-img{
-    background-color: white;
-    padding: 10px;
+.nav {
+    position: relative;
+    z-index: 200;
+    float: right;
 }
 
-.selectmovie-title h2, #year-heading    {
-font-family: 'Poppins', sans-serif;
-font-weight: 400;
-font-size: 32px;
-color: #003049;
-border-bottom: 1px solid #F77F00;
-padding: 5px;
-margin: 1rem;
+.nav ul {
+    list-style: none outside none;
 }
 
-.error-message p{
-padding: 10px;
-    margin: 2px;
-    color: red;
-    font-family: 'Poppins';
-}
-/* Body Style */
-.selectmovie-title{
-    padding: 10px;
-    margin:5px;
+.nav>ul {
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.selectmovie-body input[type="number"]{
-    padding: 12px;
-    height: 50px;
-    width: 300px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+.nav>ul>li {
+    position: relative;
+    float: left;
+    margin: 0 13px 0 14px;
+    padding: 5px 0 5px;
 }
 
-.selectmovie-body input[name="movieyears"]{
-    padding: 12px;
-    height: 50px;
-    width: 300px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+.nav>ul>li>a {
+    display: block;
+    padding: 5px 0;
+    color: #27262c;
 }
 
-.mv-btn{
-    /* height:30px;
-    border:none;
-    padding-left: 15px;
-    padding-right:15px; */
 
-        background-color: #F77F00; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-      
+/* Banner Styles */
+
+.banner {
+    position: relative;
 }
 
-.mv-btn:hover{
-    background-color:#FCBF49; /* Green */
+.banner-img {
+    height: 100vh;
+    background-image: url(./assets/img/ind/banner-3.PNG);
+    background-size: cover;
 
 }
 
-/* Movive Listing Section */
-.movie-list{
+.banner-card {
+    width: 500px;
+    height: 500px;
+    padding: 50px;
+    background-color: var(--orange);
+    color: white;
+    margin: 3% 1% 1% 10%;
+    position: absolute;
+
+}
+
+.banner-header h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    font-size: 1.7rem;
+}
+
+
+.banner-header :after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    margin: 18px 0;
+    background: white;
+}
+
+/* Cards */
+
+.card-lists {
     padding: 50px;
     margin: 10px;
-    /* min-height: 300px;
-    min-width: 100%; */
-    background-color:rgba(243, 243, 243, 0.5);
-    /* display: inline-block;   */
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap:1em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
 }
 
-
-/* Movie Card Styling */
-
-.mvcard{
-    border-bottom: 4px solid #FCBF49;
-    background-color: rgb(255, 255, 255);
+.card {
+    width: 250px;
+    height: 500px;
+    border-bottom: 4px solid var(--orange);
     overflow: hidden;
 }
 
-.mvcard img{
-    margin-left: 30px;;
+.card-header {
+    padding: 5px;
 }
 
-.mvcard-body{
-    padding:10px;
+
+.card-body {
+    margin: 5px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
 }
 
-.mvcard-body h2{
-    padding:5px;
+.card-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.button {
+
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    border: 1px solid transparent;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button.button-white {
+    padding: 11px 15px 12px;
+    border-color: #fff;
+    color: #fff;
+}
+
+.button.button-orange {
+    border-color: var(--orange);
+    color: var(--orange);
+    padding: 5px;
+}
+
+/* Section */
+
+.section-header {
+    padding: 10px;
     margin-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    color: #003049;
-   
 }
 
-.mvcard-body h4{
-    padding:5px;
+.section-header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.section-body {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.section-featured {
+    padding: 85px 0 124px;
+    text-align: center;
+
+    /*  Mobile  */
+    ;
+}
+
+.section-featured .section-head {
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.section-featured .section-head .section-title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    font-size: 1.71429rem;
+}
+
+.section-featured .section-head .section-image {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-image {
+    text-align: center;
+}
+
+.section-image:before,
+.section-image:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 1px;
+    margin: 0 6px;
+    background: #fa6f1c;
+}
+
+.section-featured .section-head p {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2.2;
+}
+
+
+/* Footer */
+.container-footer {
+    padding: 50px;
+    height: 500px;
+    background-color: #27262c;
+    color: #fff;
+}
+
+.container-footer>p {
+    color: #fff;
+}
+
+.footer-card-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-card-header h2 {
+    color: #ffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-card-header :after {
+    content: '';
+    display: block;
+    width: 46px;
+    height: 1px;
+    margin: 22px 0 40px;
+    background: #fa6f1c;
+}
+
+.footer-card-body p {
+    color: #75737f;
+    line-height: 1.6;
+}
+
+.section-copyright{
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
     margin-bottom: 5px;
-    border-bottom: 1px solid black;
-    font-family: 'Poppins', sans-serif;
-
+     color: #75737f;
 }
-
-/* Responsive Rules */
-@media only screen and (max-width: 600px) {
-    .movie-list{
-        grid-template-columns: 1fr;
-       
-    }
-  }
