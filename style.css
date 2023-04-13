@@ -319,3 +319,11 @@ p {
     margin-bottom: 5px;
      color: #75737f;
 }
+
+/* Responsive Rules */
+@media only screen and (max-width: 600px) {
+    .card-lists {
+        grid-template-columns: 1fr;
+       
+    }
+  }
