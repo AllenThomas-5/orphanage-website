@@ -13,8 +13,9 @@ p {
 
 :root {
     --orange: #fa6f1c;
-    --light-orange:rgba(250, 111, 28, 0.2)
-
+    --light-orange: rgba(250, 111, 28, 0.2);
+    --light-grey:#f6f6f6;
+    --black:#000000;
 }
 
 .container {
@@ -24,19 +25,20 @@ p {
 
 
 /* Background Color */
-.lightorange{
+.lightorange {
     background-color: var(--light-orange);
 }
 
 /* Logo */
 
-.logo{
-    width: 300px;
+.logo {
+    width: 350px;
     height: 100px;
-    background-color: var(--orange);
-    color: #fff;
+    color:#963e09;
     padding: 15px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 
@@ -96,6 +98,8 @@ p {
     display: block;
     padding: 5px 0;
     color: #27262c;
+    text-decoration: none;
+    letter-spacing: 0.1em;
 }
 
 
@@ -107,7 +111,7 @@ p {
 
 .banner-img {
     height: 100vh;
-    background-image: url(./assets/img/ind/banner.PNG);
+    background-image: url(./assets/img/ind/banner-collab2.jpg);
     background-size: cover;
 
 }
@@ -148,24 +152,32 @@ p {
     padding: 50px;
     margin: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
 }
 
 .card {
-    width: 250px;
+    width: 500px;
     height: 500px;
     border-bottom: 4px solid var(--orange);
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
+}s
+
+.card img {
+    margin-bottom: 30px;    
+
+    object-fit: cover;
 }
 
 .card-header {
-    padding: 5px;
+    padding: 15px;
 }
 
 
 .card-body {
-    margin: 5px;
+    margin: 15px;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
 }
@@ -201,7 +213,8 @@ p {
 .button.button-orange {
     border-color: var(--orange);
     color: var(--orange);
-    padding: 5px;
+    padding: 39px;
+    margin: 5px;
 }
 
 /* Section */
@@ -274,6 +287,118 @@ p {
 }
 
 
+
+/* Single Page Header */
+
+.page-header {
+    height: 300px;
+    background-color: var(--light-orange);
+}
+
+
+.main-head {
+    padding: 20px;
+    line-height: 200px;
+}
+
+
+.main-head h1 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--orange);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3.7rem;
+
+}
+
+
+
+/* Image Styles */
+
+.img-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.img-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.img-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/* ------------------------------------------------------------ */
+
+/* Dontation Style */
+
+
+.donation-box-container{
+    display: flex;
+    justify-content: center
+}
+
+.donation-banner{
+    background-image: url(./assets/img/ind/donation-banner.jpg);
+    background-size: cover;
+    background-position-y:center ;
+    
+}
+
+.donation-box {
+    /* margin: auto; */
+    /* width: 900px;
+    height: 600px; */
+    border-left: 4px solid orange;
+    background-color: var(--light-orange);
+    flex-grow: 2;
+}
+
+.donation-box-header {
+    height: 200px;
+    background-color: var(--orange);
+}
+
+
+.donation-box-header h2 {
+    color: #fff;
+    line-height: 200px;
+    text-align: left;
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+.donation-box-content {
+    padding: 20px;
+margin-top: 10px;
+margin-left: 40px;
+}
+
+.donation-box-content dt {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.donation-box-content dd {
+    display: block;
+    margin-left: 40px;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------------------------------------------ */
+
 /* Footer */
 .container-footer {
     padding: 50px;
@@ -312,18 +437,26 @@ p {
     line-height: 1.6;
 }
 
-.section-copyright{
+.section-copyright {
     position: fixed;
     bottom: 0;
     padding: 10px;
     margin-bottom: 5px;
-     color: #75737f;
+    color: #75737f;
 }
 
 /* Responsive Rules */
 @media only screen and (max-width: 600px) {
     .card-lists {
         grid-template-columns: 1fr;
-       
+
     }
-  }
+
+    /* Gallery responsive */
+
+    .img-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}
