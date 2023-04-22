@@ -34,11 +34,13 @@ p {
 .logo {
     width: 350px;
     height: 100px;
-    color:#963e09;
+    display: block;
+    color: #963e09;
     padding: 15px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    text-decoration: none;
 }
 
 
@@ -146,6 +148,49 @@ p {
     background: white;
 }
 
+/* Mobile Banner */
+.mobile-banner{
+    background-color: var(--orange);
+    display: none;
+}
+
+.mobile-banner-text  p{ 
+    color: #fff;
+    text-align: justify;
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.mobile-banner-header {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.mobile-banner-header h1{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.mobile-banner-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.mobile-banner-button .button {
+    width: 100%;
+    height: 50px;
+    display: block;
+    font-size: 20px;
+    padding: 11px 15px 12px;
+    border-color: #fff;
+    color: #fff;
+}
 /* Cards */
 
 .card-lists {
@@ -167,8 +212,9 @@ p {
 
 .card img {
     margin-bottom: 30px;    
-
-    object-fit: cover;
+    width: 500px;
+    height: 275px;
+    object-fit: contain;
 }
 
 .card-header {
@@ -221,7 +267,8 @@ p {
 
 .section-header {
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .section-header h1 {
@@ -242,8 +289,7 @@ p {
     padding: 85px 0 124px;
     text-align: center;
 
-    /*  Mobile  */
-    ;
+   
 }
 
 .section-featured .section-head {
@@ -278,6 +324,22 @@ p {
     margin: 0 6px;
     background: #fa6f1c;
 }
+
+.section-image-white {
+    text-align: center;
+}
+
+.section-image-white:before,
+.section-image-white:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 1px;
+    margin: 0 6px;
+    background: #fff;
+}
+
 
 .section-featured .section-head p {
     font-size: 14px;
@@ -346,10 +408,14 @@ p {
 }
 
 .donation-banner{
-    background-image: url(./assets/img/ind/donation-banner.jpg);
+    display: none;
+}
+
+.donation-banner-img {
+    height: 30vh;
+    background-image: url(./assets/img/ind/featured-2b.jpg);
     background-size: cover;
-    background-position-y:center ;
-    
+
 }
 
 .donation-box {
@@ -446,11 +512,51 @@ margin-left: 40px;
 }
 
 /* Responsive Rules */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    
+    .container{
+        padding: 0px;
+    }
+
+    .banner-img {
+        height: 50vh;
+        background-image: url(./assets/img/ind/banner-collab2.jpg);
+        background-size: cover;
+    }
+
+    /* Hide Nvigation  */
+    .nav-links{
+        display:none;
+    }
+
+    /* Banner Card */
+
+    .banner-card{
+        display: none;
+    }
+    
     .card-lists {
         grid-template-columns: 1fr;
 
     }
+
+    /* Mobile Section */
+    .mobile-banner {
+        background-color: var(--orange);
+        padding: 30px;
+        display: block;
+    }
+
+    /* Section */
+
+    .section-body {
+        margin: 10px 0 0 0;
+        padding: 4%;
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
 
     /* Gallery responsive */
 
@@ -458,5 +564,64 @@ margin-left: 40px;
         flex: 100%;
         max-width: 100%;
     }
+
+/* Donation page */
+
+.donation-banner{
+
+    display: block;
+}
+
+.page-header {
+    height: 200px;
+    background-color: var(--light-orange);
+}
+
+.main-head {
+    padding: 20px;
+    line-height: 160px;
+}
+
+.main-head > h1 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 25px;
+}
+
+.donation-box-image{
+    display: none;
+}
+
+.donation-box-header {
+    height: 100px;
+    background-color: var(--orange);
+}
+
+.donation-box-header h2 {
+    color: #fff;
+    line-height: 87px;
+    text-align: left;
+    font-size: 30px;
+    margin: 0px;
+    padding: 2%;
+}
+
+.donation-box-content dt {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.donation-box-content dd {
+    display: block;
+    margin-left: 40px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
 
 }
