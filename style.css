@@ -468,7 +468,7 @@ margin-left: 40px;
 /* Footer */
 .container-footer {
     padding: 50px;
-    height: 500px;
+    min-height: 500px;
     background-color: #27262c;
     color: #fff;
 }
@@ -503,6 +503,12 @@ margin-left: 40px;
     line-height: 1.6;
 }
 
+.footer-card-body p a {
+  text-decoration: none;
+  color: #75737f;
+  cursor: pointer;
+}
+
 .section-copyright {
     position: fixed;
     bottom: 0;
@@ -512,14 +518,14 @@ margin-left: 40px;
 }
 
 /* Responsive Rules */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     
     .container{
         padding: 0px;
     }
 
     .banner-img {
-        height: 50vh;
+        height: 25vh;
         background-image: url(./assets/img/ind/banner-collab2.jpg);
         background-size: cover;
     }
@@ -527,6 +533,17 @@ margin-left: 40px;
     /* Hide Nvigation  */
     .nav-links{
         display:none;
+    }
+
+    /* Footer Style */
+
+    .footer-card-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-card{
+        margin-bottom: 30px;
     }
 
     /* Banner Card */
@@ -537,7 +554,13 @@ margin-left: 40px;
     
     .card-lists {
         grid-template-columns: 1fr;
+        padding: 1px;
+        margin:2px;
 
+    }
+
+    .card{
+        width: 400px;
     }
 
     /* Mobile Section */
@@ -623,5 +646,7 @@ margin-left: 40px;
     margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
 }
+
+
 
 }
