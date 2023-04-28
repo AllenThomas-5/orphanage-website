@@ -1,0 +1,140 @@
+@media only screen and (max-width: 900px) {
+    
+    .container{
+        padding: 0px;
+    }
+
+    .banner-img {
+        height: 25vh;
+        background-image: url(./assets/img/ind/banner-collab2.jpg);
+        background-size: cover;
+    }
+
+    /* Hide Nvigation  */
+    .nav-links{
+        display:none;
+    }
+
+    .menu-donate{
+        display: none;
+    }
+
+    /* Display Movile Navigation */
+    .mobile-menubar {
+        display: block;
+    }
+
+    /* Footer Style */
+
+    .footer-card-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-card{
+        margin-bottom: 30px;
+    }
+
+    /* Banner Card */
+
+    .banner-card{
+        display: none;
+    }
+    
+    .card-lists {
+        padding: 1px;
+        margin:2px;
+        flex-direction: column;
+
+    }
+    .card{
+        width: 400px;
+    }
+
+    /* Mobile Section */
+    .mobile-banner {
+        background-color: var(--orange);
+        padding: 30px;
+        display: block;
+    }
+
+    /* Section */
+
+    .section-body {
+        margin: 10px 0 0 0;
+        padding: 4%;
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+
+    /* Gallery responsive */
+
+    .img-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+/* Donation page */
+
+.donation-banner{
+
+    display: block;
+}
+
+.page-header {
+    height: 200px;
+    background-color: var(--light-orange);
+}
+
+.main-head {
+    padding: 20px;
+    line-height: 160px;
+}
+
+.main-head > h1 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 25px;
+}
+
+.donation-box-image{
+    display: none;
+}
+
+.donation-box-header {
+    height: 100px;
+    background-color: var(--orange);
+}
+
+.donation-box-header h2 {
+    color: #fff;
+    line-height: 87px;
+    text-align: left;
+    font-size: 30px;
+    margin: 0px;
+    padding: 2%;
+}
+
+.donation-box-content dt {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.donation-box-content dd {
+    display: block;
+    margin-left: 40px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+}

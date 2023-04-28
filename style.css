@@ -14,8 +14,8 @@ p {
 :root {
     --orange: #fa6f1c;
     --light-orange: rgba(250, 111, 28, 0.2);
-    --light-grey:#f6f6f6;
-    --black:#000000;
+    --light-grey: #f6f6f6;
+    --black: #000000;
 }
 
 .container {
@@ -94,6 +94,7 @@ p {
     float: left;
     margin: 0 13px 0 14px;
     padding: 5px 0 5px;
+
 }
 
 .nav>ul>li>a {
@@ -104,6 +105,31 @@ p {
     letter-spacing: 0.1em;
 }
 
+
+/* Mobile Menu */
+
+.mobile-menubar {
+    display: none;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+.mobile-menubar ul>li {
+    padding: 15px 0px;
+    border-bottom: 1px solid white;
+}
+
+.mobile-menubar ul>li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.1em;
+    padding: 5px 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 /* Banner Styles */
 
@@ -149,12 +175,12 @@ p {
 }
 
 /* Mobile Banner */
-.mobile-banner{
+.mobile-banner {
     background-color: var(--orange);
     display: none;
 }
 
-.mobile-banner-text  p{ 
+.mobile-banner-text p {
     color: #fff;
     text-align: justify;
     padding-bottom: 5px;
@@ -167,14 +193,14 @@ p {
     margin-bottom: 2%;
 }
 
-.mobile-banner-header h1{
+.mobile-banner-header h1 {
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
 }
 
-.mobile-banner-button{
+.mobile-banner-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,6 +217,7 @@ p {
     border-color: #fff;
     color: #fff;
 }
+
 /* Cards */
 
 .card-lists {
@@ -209,10 +236,10 @@ p {
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
-}s
+}
 
-.card img {
-    margin-bottom: 30px;    
+s .card img {
+    margin-bottom: 30px;
     width: 500px;
     height: 275px;
     object-fit: contain;
@@ -290,7 +317,7 @@ p {
     padding: 85px 0 124px;
     text-align: center;
 
-   
+
 }
 
 .section-featured .section-head {
@@ -403,12 +430,12 @@ p {
 /* Dontation Style */
 
 
-.donation-box-container{
+.donation-box-container {
     display: flex;
     justify-content: center
 }
 
-.donation-banner{
+.donation-banner {
     display: none;
 }
 
@@ -440,12 +467,12 @@ p {
     text-align: left;
     font-size: 30px;
     margin-left: 5px;
-  }
+}
 
 .donation-box-content {
     padding: 20px;
-margin-top: 10px;
-margin-left: 40px;
+    margin-top: 10px;
+    margin-left: 40px;
 }
 
 .donation-box-content dt {
@@ -505,9 +532,9 @@ margin-left: 40px;
 }
 
 .footer-card-body p a {
-  text-decoration: none;
-  color: #75737f;
-  cursor: pointer;
+    text-decoration: none;
+    color: #75737f;
+    cursor: pointer;
 }
 
 .section-copyright {
@@ -522,37 +549,17 @@ margin-left: 40px;
 
 @media only screen and (max-width: 1000px) {
 
-        /* Hide Nvigation  */
-        .nav-links{
-            display:none;
-        }
-
-    .card-lists {
-        padding: 1px;
-        margin:2px;
-        flex-direction: column;
-        align-items: center;
-
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    
-    .container{
-        padding: 0px;
-    }
-
-    .banner-img {
-        height: 25vh;
-        background-image: url(./assets/img/ind/banner-collab2.jpg);
-        background-size: cover;
-    }
-
     /* Hide Nvigation  */
-    .nav-links{
-        display:none;
+    .nav-links {
+        display: none;
     }
 
+        /* Display Movile Navigation */
+        .mobile-menubar {
+            display: block;
+        }
+    
+        
     /* Footer Style */
 
     .footer-card-items {
@@ -564,106 +571,23 @@ margin-left: 40px;
         margin-bottom: 30px;
     }
 
-    /* Banner Card */
 
-    .banner-card{
-        display: none;
-    }
-    
     .card-lists {
         padding: 1px;
-        margin:2px;
+        margin: 2px;
         flex-direction: column;
+        align-items: center;
 
     }
-    .card{
-        width: 400px;
+
+    .main-head > h1 {
+        font-size: 25px;
     }
 
-    /* Mobile Section */
-    .mobile-banner {
-        background-color: var(--orange);
-        padding: 30px;
-        display: block;
+    /* Donation page */
+    .donation-box-image{
+        display: none;
     }
-
-    /* Section */
-
-    .section-body {
-        margin: 10px 0 0 0;
-        padding: 4%;
-        text-align: left;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-
-    /* Gallery responsive */
-
-    .img-column {
-        flex: 100%;
-        max-width: 100%;
-    }
-
-/* Donation page */
-
-.donation-banner{
-
-    display: block;
-}
-
-.page-header {
-    height: 200px;
-    background-color: var(--light-orange);
-}
-
-.main-head {
-    padding: 20px;
-    line-height: 160px;
-}
-
-.main-head > h1 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--orange);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 25px;
-}
-
-.donation-box-image{
-    display: none;
-}
-
-.donation-box-header {
-    height: 100px;
-    background-color: var(--orange);
-}
-
-.donation-box-header h2 {
-    color: #fff;
-    line-height: 87px;
-    text-align: left;
-    font-size: 30px;
-    margin: 0px;
-    padding: 2%;
-}
-
-.donation-box-content dt {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 2px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-}
-
-.donation-box-content dd {
-    display: block;
-    margin-left: 40px;
-    font-size: 20px;
-    margin-bottom: 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
 
 
 }
