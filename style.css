@@ -257,8 +257,19 @@ s .card img {
 }
 
 .card-footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    height: 130px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.card-footer a {
+    padding: 10px;
+    border: 1px solid var(--orange);
+    text-decoration: none;
+    color: var(--orange);
 }
 
 .button {
